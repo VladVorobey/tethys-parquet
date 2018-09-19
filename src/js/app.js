@@ -7,6 +7,10 @@ import '../../node_modules/jquery-popup-overlay/jquery.popupoverlay';
 import '../../node_modules/snazzy-info-window/dist/snazzy-info-window.min';
 
 $(document).ready(function() {
+  //------- PRELOADER ---------
+  $(window).on('load', function() {
+    $('.preloader').delay(1000).fadeOut('slow');
+  });
   //----------- TABS-MAPS -------------
   $('.tabs__wrap').hide();
   $('.tabs__wrap:first').show();
@@ -26,6 +30,10 @@ $(document).ready(function() {
   $('.ct-series').click(function() {
     $('.ct-series').removeClass('active');
     $(this).addClass('active');
+  });
+  $('.ct-series-two').click(function() {
+    $('.ct-series-two').removeClass('active-two');
+    $(this).addClass('active-two');
   });
   //--------------- HAMBURGER ------------
 
@@ -429,5 +437,73 @@ var responsiveOptions = [
 
 new Chartist.Pie('.ct-chart', data, options, responsiveOptions);
 
+
+
+
+var dataTwo = {
+  labels: [['2017'],['2018'],['2016']],
+  series: [{
+    value: 40,
+    name: 'Series 1',
+    className: 'my-custom-class-one-two',
+    meta: 'Meta One'
+  }, {
+    value: 30,
+    name: 'Series 2',
+    className: 'my-custom-class-two-two',
+    meta: 'Meta Two'
+  }, {
+    value: 40,
+    name: 'Series 3',
+    className: 'my-custom-class-three-two  active-two',
+    meta: 'Meta Three'
+  }]
+};
+
+var optionsTwo = {
+  showLabel: false,
+  chartPadding: 50,
+  classNames: {
+    chartPie: 'ct-chart-pie-two',
+    series: 'ct-series-two',
+    slicePie: 'ct-slice-pie-two',
+    label: 'ct-label-two'
+  },
+  // labelInterpolationFnc: function(value) {
+  //   return value[0];
+  // }
+};
+
+var responsiveOptionsTwo = [
+  ['screen and (min-width: 575px)', {
+    width: 300,
+    chartPadding: 50,
+    labelOffset: 10,
+    labelInterpolationFnc: function(value) {
+      return value;
+    }
+  }],
+  ['screen and (min-width: 768px)', {
+    width: 450,
+    labelInterpolationFnc: function(value) {
+      return value;
+    }
+  }],
+  ['screen and (min-width: 992px)', {
+    width: 500,
+    labelInterpolationFnc: function(value) {
+      return value;
+    }
+  }],
+  ['screen and (min-width: 1300px)', {
+    width: 600,
+    labelInterpolationFnc: function(value) {
+      return value;
+    }
+  }]
+];
+
+
+new Chartist.Pie('.ct-chart-two', dataTwo, optionsTwo, responsiveOptionsTwo);
 
 

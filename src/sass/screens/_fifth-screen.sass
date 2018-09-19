@@ -78,13 +78,13 @@
 		.swiper-pagination
 			position: relative
 			bottom: 0
-	.ct-chart-wrapper
+	.ct-chart-wrapper, .ct-chart-wrapper-two
 		position: relative
 		height: 50%
 		width: 550px
 		+r(992)
 			display: none
-	.ct-chart-title
+	.ct-chart-title, .ct-chart-title-two
 		position: absolute
 		text-align: center
 		cursor: pointer
@@ -117,42 +117,65 @@
 			+r(1300)
 				right: 15%
 				top: 40%
-	.ct-chart
+	.ct-chart-title-two
+		&:nth-child(3)
+			top: 40%
+			right: 5%
+			+r(1300)
+				right: 15%
+				top: 40%
+	.ct-chart, .ct-chart-two
 			width: auto
 			height: 550px
-			.ct-chart-pie
+			.ct-chart-pie, .ct-chart-pie-two
 				padding: 20px
 				stroke: $silver
 				stroke-width: 1
 				stroke-dasharray: 5 3
 				cursor: pointer
-			.my-custom-class-one
+			.my-custom-class-one, .my-custom-class-one-two
 				path
 					fill: #ffffff
 					&:hover
 						fill: $azure
 						transition: all ease .3s
 						transform: scale(1.1) translateX(-27px) translateY(-27px)
-			.my-custom-class-two
+			.my-custom-class-two, .my-custom-class-two-two
 				path
 					fill: #ffffff
 					&:hover
 						fill: $azure
 						transition: all ease .3s
 						transform: scale(1.1) translateX(-27px) translateY(-27px)
-			.my-custom-class-three
+			.my-custom-class-three, .my-custom-class-three-two
 				path
 					fill: #ffffff
 					&:hover
 						fill: $azure
 						transition: all ease .3s
 						transform: scale(1.1) translateX(-27px) translateY(-27px)
-			.active
+			.active, .active-two
 				stroke-dasharray: 0
 				path
 					fill: $azure
 					transition: all ease .3s
 					transform: scale(1.1) translateX(-27px) translateY(-27px)
 					filter: drop-shadow(30px 30px 50px #abc0da)
+	.ct-chart-two
+		.my-custom-class-one-two
+			path
+				&:hover
+					fill: $apple
+		.my-custom-class-two-two
+			path
+				&:hover
+					fill: $apple
+		.my-custom-class-three-two
+			path
+				&:hover
+					fill: $apple
+		.active-two
+			path
+				fill: $apple
 	.container
 		overflow: initial
