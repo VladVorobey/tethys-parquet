@@ -1,0 +1,56 @@
+html, body
+	font-family: "Gilroy",sans-serif
+	font-weight: 400
+	font-style: normal
+	font-size: 16px
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	margin: 0
+	padding: 0
+.our
+	width: 100%
+	overflow: hidden
+	height: auto
+body
+	background: grey
+*
+	margin: 0
+	padding: 0
+
+input, textarea
+	border-bottom: 2px solid $white
+	border-radius: 0
+	outline: none
+	box-shadow: none
+	-webkit-appearance: none
+	-moz-appearance: none
+	&:focus:required:invalid
+		border-color: $white
+		color: $white
+		outline: none
+		box-shadow: none
+		-webkit-appearance: non
+	&:required:valid
+		border-color: $white
+		color: $white
+		outline: none
+		box-shadow: none
+		-webkit-appearance: non
+	&::placeholder
+		color: $white
+		font-size: 18px
+		line-height: 2
+		font-family: $default-font
+		font-weight: 300
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+a,
+a:focus,
+a:hover
+	outline: none
+	text-decoration: none

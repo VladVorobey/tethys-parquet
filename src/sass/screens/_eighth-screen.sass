@@ -1,0 +1,108 @@
+.eighth-screen
+	position: relative
+	background: $white
+	padding-top: 100px
+	padding-bottom: 10px
+	+r(575)
+		padding-top: 50px
+	.content
+		width: 50%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		+r(992)
+			width: 100%
+		h4
+			font-family: $default-font
+			font-weight: 800
+			font-size: 26px
+			color: $mine-shaft
+			text-transform: uppercase
+			margin-bottom: 10px
+			+r(992)
+				text-align: center
+			+r(576)
+				font-size: 18px
+		p
+			font-family: $helper-font
+			font-weight: 500
+			font-size: 14px
+			color: $tundora
+			line-height: 1.5
+			position: relative
+			&::before
+				content: ''
+				width: 70px
+				height: 2px
+				background: $mine-shaft
+				position: absolute
+				bottom: -50px
+				+r(992)
+					left: 50%
+					transform: translateX(-50%)
+					bottom: -10px
+			+r(992)
+				text-align: center
+				br
+					display: none
+			+r(576)
+				font-size: 12px
+		.colleciton
+			display: flex
+			flex-wrap: wrap
+			padding-top: 65px
+			+r(992)
+				padding-top: 25px
+			+r(400)
+				align-items: flex-start
+			.item
+				width: 33%
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				p
+					font-weight: 600
+					&::before
+						display: none
+				strong
+					font-weight: 400
+				strong, p
+					font-family: $helper-font
+					font-size: 14px
+					color: $tundora
+				img
+					+r(375)
+						width: 100%
+		.image
+			position: relative
+			img
+				min-height: 550px
+				padding-left: 15px
+				+r(992)
+					padding-left: 0
+					width: 100%
+					margin-bottom: 20px
+					min-height: auto
+		&__wrapper
+			display: flex
+			margin-bottom: 120px
+			+r(768)
+				margin-bottom: 30px
+			&:nth-child(odd)
+				flex-direction: row-reverse
+				.image
+					img
+						float: right
+						padding-right: 15px
+				.content
+					padding-left: 15px
+			+r(992)
+				flex-direction: column-reverse
+				margin-bottom: 30px
+				&:nth-child(odd)
+					flex-direction: column-reverse
+					.image
+						img
+							padding-right: 0
+							width: 100%

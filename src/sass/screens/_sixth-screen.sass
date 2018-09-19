@@ -1,0 +1,121 @@
+.sixth-screen
+	padding-top: 108px
+	background: $white
+	padding-bottom: 50px
+	+r(575)
+		padding-top: 50px
+		padding-bottom: 0
+	.title
+		margin-bottom: 22px
+		h2
+			margin-bottom: 5px
+		h3
+			margin-bottom: 15px
+		+r(992)
+			br
+				display: none
+	.swiper-container-two
+		position: relative
+		width: 100%
+
+
+		.swiper-slide
+			text-align: center
+			font-size: 18px
+			background: #fff
+			/* Center slide text vertically */
+			display: flex
+			justify-content: center
+			align-items: center
+			max-height: 400px
+			+r(575)
+				margin-bottom: 50px
+	.swiper-pagination
+		top: 0
+		transform: translateX(23.9%)
+		font-size: 0
+		position: relative
+		+r(768)
+			transform: translateX(15%)
+		+r(575)
+			transform: translateX(10%)
+		+r(375)
+			transform: translateX(-5%)
+	.swiper-pagination-current
+		text-transform: uppercase
+		font-family: $default-font
+		font-size: 31px
+		font-weight: 800
+		color: $mine-shaft
+		&::before
+			content: 'Этап'
+			padding-right: 5px
+			text-transform: uppercase
+			font-family: $default-font
+			font-size: 31px
+			font-weight: 800
+			color: $mine-shaft
+		&::after
+			content: '/'
+			transform: rotate(22deg) translateX(20px) translateY(-30px)
+			position: absolute
+			font-size: 44px
+			color: $azure
+	.swiper-pagination-total
+		color: $azure
+		transform: translateY(25px) translateX(15px)
+		padding-left: 20px
+		font-size: 21px
+		position: absolute
+		font-family: $default-font
+		font-weight: 800
+		&::before
+			content: 'из'
+			text-transform: uppercase
+			padding-right: 12px
+	.swiper-button-next,.swiper-button-prev
+		width: 65px
+		height: 65px
+		background-color: $white
+		box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.16)
+		top: 50%
+		+r(768)
+			transform: scale(0.8)
+		+r(575)
+			transform: scale(0.5)
+	.swiper-button-prev
+		left: 19%
+		+r(575)
+			left: 1%
+	.swiper-button-next
+		right: 19%
+		+r(575)
+			right: 1%
+	.swiper-wrapper
+		padding-top: 47px
+		padding-bottom: 50px
+		.swiper-slide
+			&__wrapper
+				position: relative
+				margin: 0 20px
+				.content
+					text-align: left
+					position: absolute
+					right: 40px
+					top: 12px
+					max-width: 150px
+					h5
+						font-family: $default-font
+						font-size: 31px
+						font-weight: 800
+						color: $white
+						margin-bottom: 10px
+						text-transform: uppercase
+					p
+						font-family: $helper-font
+						font-weight: 500
+						font-size: 12px
+						color: $white
+						line-height: 1.5
+				img
+					width: 100%

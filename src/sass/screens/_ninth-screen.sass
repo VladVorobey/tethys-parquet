@@ -1,0 +1,62 @@
+.ninth-screen
+	position: relative
+	padding-top: 120px
+	padding-bottom: 85px
+	background: $alabaster
+	+r(576)
+		padding-top: 50px
+		padding-bottom: 50px
+	.slide__wrapper
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		.slide
+			width: 50%
+			padding-right: 15px
+			+r(992)
+				width: 100%
+				padding-right: 0
+				margin-bottom: 30px
+			&:nth-child(even)
+				padding-left: 15px
+				padding-right: 0
+				margin-bottom: 30px
+				+r(992)
+					padding-left: 0
+		.slide__head
+			font-family: $helper-font
+			font-weight: 600
+			font-size: 14px
+			color: $mine-shaft
+			background: $concrete
+			padding-left: 20px
+			padding-right: 70px
+			height: 53px
+			display: flex
+			align-items: center
+			position: relative
+			&::before
+				content: url('../img/arrow-down.svg')
+				position: absolute
+				width: 15px
+				height: 15px
+				right: 18px
+			+r(992)
+				height: 70px
+		.active
+			&::before
+				content: url('../img/arrow-up.svg')
+		.slide__toggle
+			font-family: $helper-font
+			font-weight: 400
+			font-size: 14px
+			color: $tundora
+			background: $white
+			border: 1px solid $concrete
+			padding: 13px 60px 30px 20px
+			margin-bottom: 30px
+			display: none
+			line-height: 1.5
+			&_active
+				display: block
+

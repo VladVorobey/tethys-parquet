@@ -1,0 +1,172 @@
+.form-screen
+	position: relative
+	background: $white
+	padding-bottom: 30px
+	+r(768)
+		padding-top: 50px
+		padding-bottom: 50px
+	&__wrapper
+		width: 100%
+		display: flex
+		+r(768)
+			flex-direction: column
+			align-items: center
+	.title
+		margin-left: 196px
+		padding-top: 165px
+		z-index: 1
+		+r(1199)
+			margin-left: 160px
+		+r(992)
+			margin-left: 0
+			width: 50%
+		+r(768)
+			width: 100%
+			padding-top: 0
+			margin-bottom: 15px
+		h2, p
+			color: $white
+			+r(768)
+				color: $mine-shaft
+		h2
+			margin-bottom: 9px
+		p
+			font-family: $default-font
+			font-weight: 300
+			font-size: 21px
+			+r(576)
+				font-size: 16px
+		&_question
+			margin-left: 131px
+			position: relative
+			h2
+				margin-bottom: 0
+			p
+				font-size: 32px
+				margin-bottom: 20px
+				+r(992)
+					font-size: 24px
+					line-height: 1.3
+					margin-bottom: 10px
+			strong
+				font-size: 16px
+				font-weight: 400
+				font-family: $helper-font
+				color: $mercury
+				text-align: right
+				max-width: 320px
+				display: block
+				margin-left: auto
+				+r(992)
+					width: 100%
+					margin: 0
+					text-align: left
+					font-size: 14px
+					color: $mine-shaft
+					max-width: none
+				br
+					display: none
+					+r(400)
+						display: block
+	.image
+		&__block
+			position: absolute
+			width: 100%
+			top: 0
+			height: 100%
+		&__item
+			position: absolute
+			+r(768)
+				display: none
+			img
+				width: 100%
+				position: relative
+			&:nth-child(1)
+				left: 50%
+				top: 60px
+				transform: translateX(-960px)
+				+r(1020)
+					transform: translateX(-945px)
+				+r(992)
+					transform: translateX(-900px)
+			&:nth-child(2)
+				left: 50%
+				top: 90px
+				transform: translateX(-456px)
+				+r(1020)
+					transform: translateX(-449px)
+			&:nth-child(3)
+				left: 50%
+				top: 150px
+				transform: translateX(503px)
+				+r(1199)
+					transform: translateX(465px)
+				+r(992)
+					transform: translateX(330px)
+.form__section
+	max-width: 456px
+	max-height: 682px
+	background: $san-juan
+	color: $white
+	z-index: 1
+	margin-left: 25px
+	padding: 105px 90px 60px
+	+r(1199)
+		margin-left: 30px
+	+r(768)
+		width: 100%
+		margin-left: 0
+		padding: 50px 60px
+	+r(576)
+		padding: 30px 15px
+	img
+		margin-bottom:  100px
+		width: 260px
+		+r(768)
+			margin: 0 auto 30px
+			display: block
+		+r(576)
+			width: 90%
+	form
+		position: relative
+		input
+			width: 100%
+			background: $san-juan
+			padding: 5px 0
+			margin-bottom: 33px
+			&:last-of-type
+				margin-bottom: 42px
+		button
+			width: 100%
+			text-align: center
+			background: linear-gradient( 0deg, rgb(254,85,30) 0%, rgb(255,103,53) 46%, rgb(255,121,76) 100%)
+			box-shadow: 0 12px 21px 0 rgba(254, 86, 32, 0.2)
+			padding: 17px 0
+			text-transform: uppercase
+			font-family: $helper-font
+			font-weight: 700
+			font-size: 12px
+			color: $white
+		label.error
+			position: absolute
+			top: 0
+			left: 0
+			background: red
+			width: 100%
+			padding: 2px
+			&::before
+				content: ''
+				width: 10px
+				height: 10px
+				background: red
+				transform: rotate(45deg)
+				position: absolute
+				bottom: -5px
+				left: 10px
+		#name-error
+			top: -25px
+		#tel-error
+			top: 40px
+		#email-error
+			top: 105px
+

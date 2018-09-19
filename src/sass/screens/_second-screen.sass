@@ -1,0 +1,103 @@
+.second-screen
+	padding-top: 85px
+	background: $white
+	padding-bottom: 90px
+	+r(500)
+		padding-top: 50px
+		padding-bottom: 50px
+	&__block
+		display: flex
+		width: 100%
+		flex-wrap: wrap
+		.item
+			width: 50%
+			+r(768)
+				width: 100%
+			img
+				width: 100%
+			p
+				font-family: $default-font
+				font-weight: 800
+				font-size: 18px
+				line-height: 1.35
+				padding-right: 40px
+				min-height: 60px
+				display: flex
+				align-items: center
+				justify-content: flex-end
+				+r(768)
+					font-size: 16px
+					padding-right: 15px
+					padding-left: 15px
+					justify-content: flex-start
+					br
+						display: none
+				+r(575)
+					font-size: 15px
+				+r(500)
+					font-size: 14px
+
+			&:nth-child(even)
+				display: flex
+				flex-direction: column-reverse
+				+r(768)
+					flex-direction: column
+				p
+					padding-left: 40px
+					justify-content: start
+					+r(500)
+						padding-left: 15px
+				img
+					margin-bottom: 60px
+					+r(768)
+						margin-bottom: 0
+			&:last-child
+				p
+					+r(768)
+						margin-bottom: 20px
+	.button
+		font-family: $helper-font
+		font-weight: 700
+		line-height: 2
+		display: flex
+		justify-content: center
+		position: relative
+		margin: 0 auto
+		a
+			display: inline-block
+			text-transform: uppercase
+			font-size: 12px
+			color: $orange
+			background: transparent
+			padding: 8px 61px 8px 41px
+			transition: ease all 0.3s
+			border: 1px solid $orange
+			position: relative
+			&:hover
+				transition: all 0.5s ease
+				background: $orange
+				color: $white
+				transform: translateY(2px)
+				&::before
+					background: $white
+				&::after
+					border-color: $white
+			&::before
+				content: ''
+				width: 1px
+				height: 11px
+				background: $orange
+				position: absolute
+				top: 50%
+				transform: translateY(-45%)
+				right: 15%
+			&::after
+				content: ''
+				width: 8px
+				height: 8px
+				border-right: 1px solid $orange
+				border-bottom: 1px solid $orange
+				position: absolute
+				transform: rotate(45deg) translateY(-50%) translateX(1px)
+				top: 50%
+				right: 15%

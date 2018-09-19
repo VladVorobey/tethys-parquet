@@ -1,0 +1,158 @@
+.fifth-screen
+	padding-top: 175px
+	background: url("../img/fifth-screen-bg.png") top center no-repeat $white
+	padding-bottom: 140px
+	background-size: cover
+	z-index: -1
+	+r(992)
+		padding-top: 85px
+		padding-bottom: 85px
+	+r(576)
+		padding-top: 50px
+		padding-bottom: 50px
+	.swiper-container
+		position: relative
+		width: 100%
+		.swiper-slide
+			display: flex
+			.info
+				padding-top: 84px
+				padding-right: 40px
+				width: 50%
+				text-align: right
+				+r(1300)
+					width: 42%
+				+r(992)
+					width: 100%
+					text-align: left
+					padding: 0 15px 20px
+					img
+						width: 100%
+				h4
+					font-size: 21px
+					font-family: $default-font
+					font-weight: 800
+					text-transform: uppercase
+					color: $mine-shaft
+					margin-bottom: 20px
+					+r(992)
+						font-size: 17px
+				p
+					font-family: $helper-font
+					font-weight: 400
+					font-size: 16px
+					line-height: 1.5
+					color: $mine-shaft-lighter
+					margin-bottom: 11px
+					+r(992)
+						font-size: 14px
+					+r(1200)
+						br
+							display: none
+				.diagram
+					display: none
+					+r(992)
+						display: block
+						text-align: center
+						width: 100%
+						cursor: pointer
+						p
+							padding: 10px
+							border-radius: 8px
+							border: 1px dashed $tundora
+							color: $mine-shaft
+							font-family: $default-font
+							font-weight: 800
+							font-size: 20px
+
+						strong
+							font-size: 18px
+							font-family: $helper-font
+							font-weight: 500
+					+r(676)
+						p
+
+							font-size: 16px
+						strong
+							font-size: 14px
+		.swiper-pagination
+			position: relative
+			bottom: 0
+	.ct-chart-wrapper
+		position: relative
+		height: 50%
+		width: 550px
+		+r(992)
+			display: none
+	.ct-chart-title
+		position: absolute
+		text-align: center
+		cursor: pointer
+		color: $mine-shaft
+		strong
+			font-family: $default-font
+			font-weight: 800
+			font-size: 31px
+			+r(1300)
+				font-size: 24px
+		p
+			font-size: 14px
+			font-family: $helper-font
+			font-weight: 500
+		&:nth-child(1)
+			left: 50%
+			bottom: 10%
+			+r(1300)
+				left: 45%
+				bottom: 18%
+		&:nth-child(2)
+			top: 40%
+			left: 30%
+			+r(1300)
+				left: 27%
+				top: 43%
+		&:nth-child(3)
+			top: 38%
+			right: 0
+			+r(1300)
+				right: 15%
+				top: 40%
+	.ct-chart
+			width: auto
+			height: 550px
+			.ct-chart-pie
+				padding: 20px
+				stroke: $silver
+				stroke-width: 1
+				stroke-dasharray: 5 3
+				cursor: pointer
+			.my-custom-class-one
+				path
+					fill: #ffffff
+					&:hover
+						fill: $azure
+						transition: all ease .3s
+						transform: scale(1.1) translateX(-27px) translateY(-27px)
+			.my-custom-class-two
+				path
+					fill: #ffffff
+					&:hover
+						fill: $azure
+						transition: all ease .3s
+						transform: scale(1.1) translateX(-27px) translateY(-27px)
+			.my-custom-class-three
+				path
+					fill: #ffffff
+					&:hover
+						fill: $azure
+						transition: all ease .3s
+						transform: scale(1.1) translateX(-27px) translateY(-27px)
+			.active
+				stroke-dasharray: 0
+				path
+					fill: $azure
+					transition: all ease .3s
+					transform: scale(1.1) translateX(-27px) translateY(-27px)
+					filter: drop-shadow(30px 30px 50px #abc0da)
+	.container
+		overflow: initial

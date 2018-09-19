@@ -1,0 +1,62 @@
+.footer
+	position: relative
+	width: 100%
+	padding-top: 40px
+	padding-bottom: 40px
+	background: $azure
+	z-index: 2
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		+r(1199)
+			justify-content: center
+			margin-bottom: 15px
+		.nav
+			max-width: 550px
+			a
+				color: $white
+		.button__block
+			display: flex
+			flex-wrap: wrap
+			text-transform: uppercase
+			font-family: $helper-font
+			font-weight: 700
+			font-size: 12px
+			justify-content: flex-end
+			max-width: 380px
+			+r(400)
+				justify-content: center
+			.button
+				a
+					color: $mine-shaft
+					padding: 15px 30px
+					background: $white
+					display: inline-block
+					+r(400)
+						margin-bottom: 15px
+				&:nth-child(2n)
+					margin-left: 30px
+					margin-bottom: 30px
+					+r(400)
+						margin: 0
+		.social
+			color: $white
+			img
+				width: 16px
+				height: 16px
+				margin-left: 16px
+				&:first-child
+					margin-left: 30px
+	.logo
+		width: 165px
+		height: 100px
+
+	.copyright
+		text-transform: uppercase
+		font-family: $helper-font
+		font-weight: 700
+		font-size: 12px
+		color: $havelock-blue
+		text-align: center
